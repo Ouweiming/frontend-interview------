@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>可拖拽积木块</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>可拖拽积木块</h1>
+        
+        <!-- CSS版本 -->
+        <div class="demo-section">
+            <h2>纯HTML+CSS实现（有限制）</h2>
+            <div class="container">
+                <div class="block" draggable="true" tabindex="0">积木块1</div>
+            </div>
+            
+            <div class="instructions">
+                <p><strong>说明：</strong>根据我目前的了解，使用纯HTML+CSS无法完全实现拖拽并限制在父容器内。</p>
+                <p>所以采用了原生HTML5拖拽API，但是其主要用于在元素间传输数据，而非在容器内定位。</p>
+            </div>
+        </div>
+        
+        <!-- JS版本 -->
+        <div class="demo-section">
+            <h2>JavaScript实现（完整拖拽功能）</h2>
+            <div class="container" id="js-container">
+                <div class="js-block" id="draggable">积木块2</div>
+            </div>
+            
+            <div class="instructions">
+                <p><strong>使用说明：</strong>这种实现使用JavaScript监听鼠标事件，实现真正的拖拽功能并限制在容器内。</p>
+            
+            </div>
+        </div>
+        
+        <script src="index.js"></script>
+    </body>
+</html>
